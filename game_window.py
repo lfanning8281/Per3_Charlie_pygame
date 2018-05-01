@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 import pygame
-screen = pygame.display.set_mode((500, 500))
+width=int(input("Input width "))
+height=int(input("Input height "))
+screen = pygame.display.set_mode((width, height))
 running=True
 while running:
 	event=pygame.event.poll()
