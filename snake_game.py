@@ -5,12 +5,23 @@ button_down = Button(25)
 button_up = Button(8)
 
 
-while True:
+
+        
+def is_right_button_pressed():
     if button_right.is_pressed:
-        print('turn right')
-    elif button_left.is_pressed:
-        print('turn left')
-    elif button_down.is_pressed:
-        print('turn down')
-    elif button_up.is_pressed:
-        print('turn up')
+        return "right"
+def is_left_button_pressed():
+    if button_left.is_pressed:
+        return "left"
+def is_down_button_pressed():
+    if button_down.is_pressed:
+        return "down"
+def is_up_button_pressed():
+    if button_up.is_pressed:
+        return "up"
+if __name__ == '__main__':
+    while True:
+        is_right_button_pressed()
+        is_left_button_pressed()
+        is_down_button_pressed()
+is_up_button_pressed()
