@@ -27,14 +27,15 @@ f = pygame.font.SysFont('Arial', 20);
 clock = pygame.time.Clock()
 while True:
 	clock.tick(10)
+
 	for e in pygame.event.get():
 		if e.type == QUIT:
 			sys.exit(0)
 		elif e.type == KEYDOWN:
-			if e.key == K_UP and dirs != 0:dirs = 2
-			elif e.key == K_DOWN and dirs != 2:dirs = 0
-			elif e.key == K_LEFT and dirs != 1:dirs = 3
-			elif e.key == K_RIGHT and dirs != 3:dirs = 1
+			if is_up_button_pressed() and dirs != 0:dirs = 2
+			elif is_down_button_pressed() and dirs != 2:dirs = 0
+			elif is_left_button_pressed() and dirs != 1:dirs = 3
+			elif is_right_button_pressed() and dirs != 3:dirs = 1
 	i = len(xs)-1
 	while i >= 2:
 		if collide(xs[0], xs[i], ys[0], ys[i], 20, 20, 20, 20):die(s, score)
